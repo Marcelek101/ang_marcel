@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Task } from './task';
+import { FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
 })
 export class AppComponent {
-  taskName: string = '';
+  taskName = 'Sugerowane zadamie codzienne: odkurzanie';
   config: { [key: string]: string } | null  = null;
   tasks: Task[] = [
     {
@@ -43,16 +44,12 @@ export class AppComponent {
     this.tasks = [];
   }
 
-  onKeyUp(event: KeyboardEvent){
-    const target = event.target as HTMLInputElement;
-    this.taskName = target.value;
+  
 
-  }
-
-  createTask(){
+  createTask(name: string, deadline: string){
     const task: Task = {
-      name: this.taskName,
-      deadline: '2025-01-07',
+      name: name,
+      deadline,
       done: false,
   };
   this.tasks.push(task);
