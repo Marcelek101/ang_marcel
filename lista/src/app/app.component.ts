@@ -9,6 +9,7 @@ import { Task } from './task';
   imports: [CommonModule],
 })
 export class AppComponent {
+  taskName: string = '';
   config: { [key: string]: string } | null  = null;
   tasks: Task[] = [
     {
@@ -37,4 +38,23 @@ export class AppComponent {
       };
     }, 500);
   }
+
+  clearTasks() {
+    this.tasks = [];
+  }
+
+  onKeyUp(event: KeyboardEvent){
+    const target = event.target as HTMLInputElement;
+    this.taskName = target.value;
+
+  }
+
+  createTask(){
+    const task: Task = {
+      name: this.taskName,
+      deadline: '2025-01-07',
+      done: false,
+  };
+  this.tasks.push(task);
+ }
 }
