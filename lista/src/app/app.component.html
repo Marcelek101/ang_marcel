@@ -44,7 +44,7 @@
   <footer class="page-footer mt-5">
     <div class="footer-copyright">
       <div class="container">
-        {{ getDate() | date: 'yyyy' }} {{ footer }}
+        {{ config?.['date'] | date: 'yyyy' }} {{ footer }}
       </div>
     </div>
   </footer>
