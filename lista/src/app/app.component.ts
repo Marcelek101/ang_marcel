@@ -10,7 +10,9 @@ import { FormsModule } from '@angular/forms'
   imports: [CommonModule, FormsModule],
 })
 export class AppComponent {
+  editMode = false;
   taskName = 'Sugerowane zadamie codzienne: odkurzanie';
+  taskDate ='';
   config: { [key: string]: string } | null  = null;
   tasks: Task[] = [
     {
@@ -21,7 +23,7 @@ export class AppComponent {
     {
       name: 'Nauka Angulara',
       deadline: '2020-01-03',
-      done: false,
+      done: true,
     },
     {
       name: 'Sprzątanie kuwety',
@@ -46,12 +48,18 @@ export class AppComponent {
 
   
 
-  createTask(name: string, deadline: string){
+  createTask(){
     const task: Task = {
-      name: name,
-      deadline,
+      name: this.taskName,
+      deadline: this.taskDate,
       done: false,
   };
   this.tasks.push(task);
+  this.taskName = '';
+  this.taskDate = '';
+ }
+
+ switchEditMode(){
+  this.editMode = !this.editMode;
  }
 }
