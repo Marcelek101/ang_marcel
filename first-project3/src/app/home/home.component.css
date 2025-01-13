@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color:rgb(30, 32, 54);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #00bcd4;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  
+  
+  h1 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  
+  }
+  
+  .li {
+    width: 900px;   
+    height: 1px;  
+    background-color: black; 
+    
+  }
+  
+  .a{
+    width: 0px;   
+    height: 0px;  
+    background-color: black; 
+    
+  }
+  
+  button{
+    color: white;
+    background-color: black;
+    font-size: 18px;
+  }
+  
+  .coś{
+    justify-content: center;
+    display: flex;
+    font-size: 18px;
+    font-style: italic;
+    flex-direction: column;
+    
+  }
+  
+  
+  
+  button.plus_i_minus{
+    color: #ffffff;
+    background-color: rgb(30, 32, 54);
+    height: 30;
+    width: 50px;
+    font-size: 18px;
+    font-style: italic;
+  
+  }
