@@ -1,0 +1,13 @@
+/* Jasny motyw */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Ciemny motyw */
+  body.dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  

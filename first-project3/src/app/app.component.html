@@ -2,9 +2,12 @@
     <nav class="sidebar">
       <ul>
         <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">Kontakt</a></li>
-        <li><a routerLink="/contact">Kontakt</a></li>
-        <button>więcej</button>
+        <li *ngIf="ot" ><a routerLink="/about">O mnie</a></li>
+        <li *ngIf="ot" ><a routerLink="/contact">Kontakt</a></li>
+        <Li *ngIf="ot" ><a routerLink="/zdjecia">Zdjęcia</a></Li>
+        <Li *ngIf="ot" ><a routerLink="/ustawienia">Ustawienia</a></Li>
+        <button *ngIf="mniej_czy_wiecej" class="wiecej" (click)="wie()">więcej</button>
+        <button *ngIf="wiecej_czy_mniej" class="mniej" (click)="mni()">mniej</button>
       </ul>
     </nav>
   <div class="content">

@@ -43,3 +43,54 @@ html, body, .root {
 #showButton {
   margin-right: 1rem;
 }
+
+
+button.wiecej {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  
+  border: 0;
+  
+}
+
+button.wiecej:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
+
+button.mniej {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  
+  border: 0;
+  
+}
+
+button.mniej:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}

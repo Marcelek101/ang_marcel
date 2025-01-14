@@ -8,3 +8,56 @@
   display: flex;
   justify-content: center;
 }
+
+.coś{
+  font-size: 18px;
+  font-style: italic;
+}
+
+button.plus_i_minus{
+  width: 30px;
+  background-color: rgb(48, 53, 105);
+  color: #eee;
+  font-style: italic;
+  
+}
+
+p{
+  font-size: 18px;
+  font-style: italic;
+}
+
+button.kwa{
+  align-items: center;
+  appearance: none;
+  background-color: rgb(69, 80, 196);
+  background-image: linear-gradient(1deg, rgb(94, 104, 224), rgb(48, 53, 105) 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 6px 20px;
+  transition: background-color .2s,background-position .2s;
+}
+
+button.kwa:active,
+button.kwa:focus {
+  outline: none;
+}
+
+button.kwa:hover {
+  background-position: -20px -20px;
+}
+
+:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  justify-content: center;
+}

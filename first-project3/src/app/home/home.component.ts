@@ -37,5 +37,19 @@ export class HomeComponent {
       }
     }
 
+
+    jest: boolean = false;
+    po(): void {
+      {
+        this.jest = true;
+      }
+    }
+    
+    sc(): void{
+      {
+        this.jest = false;
+      }
+    }
+
   
 }

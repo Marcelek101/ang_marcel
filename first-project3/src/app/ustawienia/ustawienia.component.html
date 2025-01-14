@@ -1,0 +1,13 @@
+<h2>Ustawienia</h2>
+<div class="setting">
+  <label>
+    <input type="checkbox" (change)="toggleTheme()"> Włącz ciemny motyw
+  </label>
+</div>
+
+<select id="language" (change)="changeLanguage($event)">
+    <option *ngFor="let lang of languages" [value]="lang.code">
+      {{ lang.label }}
+    </option>
+  </select>
+  

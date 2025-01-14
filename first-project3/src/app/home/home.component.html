@@ -21,11 +21,13 @@
       <button class="plus_i_minus" (click)="plus()">+</button>
       <button class="plus_i_minus" (click)="minus()">-</button>
       <p>Numer: {{ currentNumber }}</p>
-      <div class="controls">
-        <button id="showButton">Pokaż kwadrat</button>
-        <button id="hideButton">Schowaj kwadrat</button>
-      </div>
-      <div id="square" class="square"></div>
+      
+        <button class="kwa" id="showButton" (click)="po()">Pokaż kwadrat</button>
+        <button class="kwa" id="hideButton" (click)="sc()">Schowaj kwadrat</button>
+
+      
+        
+        <div *ngIf="jest" class="square" ></div>
     </ul>
 
 </div>

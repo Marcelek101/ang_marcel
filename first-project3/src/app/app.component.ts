@@ -12,33 +12,29 @@ import { CommonModule } from '@angular/common';
   
 })
 export class AppComponent {
+
   
- 
-  inputText: string = '';
-    
-  onInputChange(): void {
-    console.log('Wpisany tekst:', this.inputText);
+  ot: boolean = false;
+  wiecej_czy_mniej: boolean = false;
+  mniej_czy_wiecej: boolean = true;
+  wie(): void {
+    {
+      this.ot = true;
+      this.wiecej_czy_mniej = true;
+      this.mniej_czy_wiecej = false;
+    }
+  }
+
+  mni(): void{
+    {
+      this.ot =false;
+      this.wiecej_czy_mniej = false;
+      this.mniej_czy_wiecej = true;
+    }
   }
 
 
-  currentNumber = 0;
-    plus(): void {
-      if (this.currentNumber < 10){
-        this.currentNumber +=1;
-      } else {
-        alert('Mamy: 10')
-      }
-    }
 
-    
-    minus(): void {
-      if (this.currentNumber > 0){
-        this.currentNumber -=1;
-      } else {
-        alert('No i znowu 0')
-      }
-    }
 
-  
 
 }
