@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
@@ -11,10 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class UstawieniaComponent {
 
-  isDarkTheme = false;
-
-  toggleTheme(): void {
-    this.isDarkTheme = !this.isDarkTheme;
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
+  reloadPage(): void {
+    window.location.reload();
   }
+
 }

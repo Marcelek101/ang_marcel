@@ -14,13 +14,18 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
 
   form: FormGroup;
-username: any;
+  username: any;
+  password: any;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
+      password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
     });
   }
+
+
+  
 
   onSubmit() {
     if (this.form.valid) {
@@ -57,4 +62,6 @@ username: any;
       this.zal = false;
     }
   }
+
+  
 }

@@ -95,22 +95,77 @@ button.mniej:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
-html, body, .Zaloguj{
-  font-size: 25px;
-  font-style: italic;
-  justify-content: center;
-  display: flex;
+
+.custom-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
-form.Zaloguj{
-  font-size: 25px;
-  font-style: italic;
+.custom-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.custom-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.custom-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 
-html, body, .button.Zaloguj{
+.custom-form div {
+  font-size: 12px;
+  color: red;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
 
-  font-size: 25px;
-  font-style: italic;
-  color: #00bcd4;
+.custom-form input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.custom-form input.ng-valid.ng-touched {
+  border-color: green;
+}
+
+.custom-form input.ng-invalid.ng-touched {
+  background-color: #ffe6e6;
+}
+
+.custom-form input.ng-valid.ng-touched {
+  background-color: #e6ffe6;
+}
+
+html, body, .custom-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
 }

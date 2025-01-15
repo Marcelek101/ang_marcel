@@ -1,7 +1,8 @@
-<div *ngIf="zal" class="Zaloguj">
-  <form #form="ngForm">
-    <label for="username">Nazwa użytkownika:</label>
-    <input
+<div *ngIf="zal">
+  <form #form="ngForm" class="custom-form">
+
+    <label  for="username">Nazwa użytkownika:</label>
+    <input 
       id="username"
       name="username"
       [(ngModel)]="username"
@@ -20,7 +21,34 @@
     <div *ngIf="usernameInput.errors?.['maxlength'] && usernameInput.touched">
       Maksymalna liczba znaków to 20.
     </div>
+    
+      <br>
+      <br>
+
+    <label for="password">Hasło:</label>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      minlength="5"
+      maxlength="20"
+      required
+      #passwordInput="ngModel"
+    />
+    <div *ngIf="passwordInput.errors?.['required'] && passwordInput.touched">
+      Pole jest wymagane.
+    </div>
+    <div *ngIf="passwordInput.errors?.['minlength'] && passwordInput.touched">
+      Minimalna liczba znaków to 5.
+    </div>
+    <div *ngIf="passwordInput.errors?.['maxlength'] && passwordInput.touched">
+      Maksymalna liczba znaków to 20.
+    </div>
+    <br>
+    <br>
     <button [disabled]="form.invalid" (click)="log()" type="submit">Zaloguj się</button>
+
   </form>
 </div>
 
@@ -35,6 +63,7 @@
         <li *ngIf="ot" ><a routerLink="/contact">Kontakt</a></li>
         <Li *ngIf="ot" ><a routerLink="/zdjecia">Zdjęcia</a></Li>
         <Li *ngIf="ot" ><a routerLink="/ustawienia">Ustawienia</a></Li>
+        <Li *ngIf="ot" ><a routerLink="/wesprzyj">wesprzyj</a></Li>
         <button *ngIf="mniej_czy_wiecej" class="wiecej" (click)="wie()">więcej</button>
         <button *ngIf="wiecej_czy_mniej" class="mniej" (click)="mni()">mniej</button>
       </ul>
