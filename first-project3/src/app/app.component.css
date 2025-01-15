@@ -94,3 +94,23 @@ button.mniej {
 button.mniej:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
+
+html, body, .Zaloguj{
+  font-size: 25px;
+  font-style: italic;
+  justify-content: center;
+  display: flex;
+}
+
+form.Zaloguj{
+  font-size: 25px;
+  font-style: italic;
+}
+
+
+html, body, .button.Zaloguj{
+
+  font-size: 25px;
+  font-style: italic;
+  color: #00bcd4;
+}

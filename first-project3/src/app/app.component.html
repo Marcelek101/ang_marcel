@@ -1,4 +1,33 @@
-<div class="root">
+<div *ngIf="zal" class="Zaloguj">
+  <form #form="ngForm">
+    <label for="username">Nazwa użytkownika:</label>
+    <input
+      id="username"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Marcelek"
+      minlength="5"
+      maxlength="20"
+      required
+      #usernameInput="ngModel"
+    />
+    <div *ngIf="usernameInput.errors?.['required'] && usernameInput.touched">
+      Pole jest wymagane.
+    </div>
+    <div *ngIf="usernameInput.errors?.['minlength'] && usernameInput.touched">
+      Minimalna liczba znaków to 5.
+    </div>
+    <div *ngIf="usernameInput.errors?.['maxlength'] && usernameInput.touched">
+      Maksymalna liczba znaków to 20.
+    </div>
+    <button [disabled]="form.invalid" (click)="log()" type="submit">Zaloguj się</button>
+  </form>
+</div>
+
+
+
+
+<div *ngIf="nap" class="root">
     <nav class="sidebar">
       <ul>
         <li><a routerLink="/">Home</a></li>

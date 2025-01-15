@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms'
+import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
 
@@ -12,6 +12,21 @@ import { CommonModule } from '@angular/common';
   
 })
 export class AppComponent {
+
+  form: FormGroup;
+username: any;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
+    });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      console.log(this.form.value);
+    }
+  }
 
   
   ot: boolean = false;
@@ -33,8 +48,13 @@ export class AppComponent {
     }
   }
 
+  nap: boolean = false;
+  zal: boolean = true;
 
-
-
-
+  log(): void{
+    {
+      this.nap = true;
+      this.zal = false;
+    }
+  }
 }

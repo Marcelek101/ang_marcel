@@ -17,23 +17,4 @@ export class UstawieniaComponent {
     this.isDarkTheme = !this.isDarkTheme;
     document.body.classList.toggle('dark-theme', this.isDarkTheme);
   }
-
-  selectedLanguage = 'pl'; // Domyślny język
-  
-
-  languages = [
-    { code: 'pl', label: 'Polski' },
-    { code: 'en', label: 'English' },
-    { code: 'de', label: 'Deutsch' },
-  ];
-
-  changeLanguage(event: Event): void {
-    const target = event.target as HTMLSelectElement;
-    const selectedLanguage = target.value;
-  
-    if (selectedLanguage) {
-      this.selectedLanguage = selectedLanguage;
-      console.log('Wybrany język:', selectedLanguage);
-    }
-  }
 }
