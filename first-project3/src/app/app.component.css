@@ -169,3 +169,16 @@ html, body, .custom-form {
 
 
 }
+
+.horizontal-list {
+  display: flex; /* Ustawienie Flexboxa */
+  list-style-type: none; /* Usunięcie kropek */
+  padding: 2; /* Usuń domyślne odstępy */
+  margin: 2; /* Usuń domyślne marginesy */
+}
+
+.horizontal-list li {
+  margin-right: 15px; /* Odstęp między elementami */
+}
+
+

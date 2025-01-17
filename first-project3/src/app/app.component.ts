@@ -16,7 +16,7 @@ import { UstawieniaComponent } from './ustawienia/ustawienia.component';
 })
 export class AppComponent {
 
-  eksportowanaZmienna = [ 'username' ];
+  eksportowanaZmienna = [ 'username'];
 
   form: FormGroup;
   username: any;
@@ -24,7 +24,7 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
+      username: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(12)]],
       password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
     });
   }

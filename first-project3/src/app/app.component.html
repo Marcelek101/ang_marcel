@@ -9,7 +9,7 @@
       [(ngModel)]="username"
       placeholder="Marcelek"
       minlength="5"
-      maxlength="20" 
+      maxlength="12" 
       required
       #usernameInput="ngModel"
     />
@@ -20,7 +20,7 @@
       Minimalna liczba znaków to 5.
     </div>
     <div *ngIf="usernameInput.errors?.['maxlength'] && usernameInput.touched">
-      Maksymalna liczba znaków to 20.
+      Maksymalna liczba znaków to 12.
     </div>
     
       <br>
@@ -58,8 +58,12 @@
 
 <div *ngIf="nap" class="root">
     <nav class="sidebar">
+      
+      <ul class="horizontal-list">
+        <h1>{{username}}</h1> 
+        <img class="aniol" src="aniol.ico" style="width: 40px; height: 40px; border-radius: 35px; padding-top: 15px;padding-left: 15px;;padding-bottom: 15px;padding-right: 15px;"/>
+      </ul>
       <ul>
-        <h1>{{username}}</h1>
         <hr>
         <li><a routerLink="/">Home</a></li>
         <li *ngIf="ot" ><a routerLink="/about">O mnie</a></li>

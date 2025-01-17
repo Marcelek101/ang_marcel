@@ -17,18 +17,17 @@
   .zdj img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  }
+  } 
   
 
   html, body, .root {
     height: 100%;
     margin: 0;
     display: flex;
-    flex-direction: row;
   }
   
   .sidebar {
-    width: 400px;
+    width: 300px;
     
   }
   
@@ -36,32 +35,3 @@
     padding: 0;
   }
   
-
-  .sidebar.inf {
-    width: 200px;
-    background-color:rgb(30, 32, 54);
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .sidebar.inf ul {
-    padding: 0;
-  }
-
-  a{
-    font-size: 25px;
-    font-style: italic;
-  }
-  .sidebar.info {
-    width: 200px;
-    background-color:rgb(30, 32, 54);
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidebar.info ul {
-    padding: 0;
-  }
