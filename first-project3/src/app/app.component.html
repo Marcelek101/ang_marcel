@@ -2,13 +2,14 @@
   <form #form="ngForm" class="custom-form">
 
     <label  for="username">Nazwa użytkownika:</label>
+    
     <input 
       id="username"
       name="username"
       [(ngModel)]="username"
       placeholder="Marcelek"
       minlength="5"
-      maxlength="20"
+      maxlength="20" 
       required
       #usernameInput="ngModel"
     />
@@ -58,10 +59,17 @@
 <div *ngIf="nap" class="root">
     <nav class="sidebar">
       <ul>
+        <h1>{{username}}</h1>
+        <hr>
         <li><a routerLink="/">Home</a></li>
         <li *ngIf="ot" ><a routerLink="/about">O mnie</a></li>
         <li *ngIf="ot" ><a routerLink="/contact">Kontakt</a></li>
         <Li *ngIf="ot" ><a routerLink="/zdjecia">Zdjęcia</a></Li>
+
+        <Li *ngIf="zdjwie && ot" ><a routerLink="/zdjecia2">Zdjęcia2</a></Li>
+        <button *ngIf="ot && zdjmni" class="zdjecia" (click)="wiezdj()" style="background-color: #cccccc; color: black; font-size: 12px; padding: 5px 10px; border: 1px solid #999999; border-radius: 20px; cursor: pointer;">więcej</button>
+        <button *ngIf="ot && zdjwie" class="zdjecia" (click)="mnizdj()" style="background-color: #cccccc; color: black; font-size: 12px; padding: 5px 10px; border: 1px solid #999999; border-radius: 20px; cursor: pointer;">mniej</button>
+
         <Li *ngIf="ot" ><a routerLink="/ustawienia">Ustawienia</a></Li>
         <Li *ngIf="ot" ><a routerLink="/wesprzyj">wesprzyj</a></Li>
         <button *ngIf="mniej_czy_wiecej" class="wiecej" (click)="wie()">więcej</button>

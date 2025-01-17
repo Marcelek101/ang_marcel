@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Input, OnInit, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ustawienia.component.css'
 })
 export class UstawieniaComponent {
+  @Input() username: any;
+
+  ngOnInit() {}
 
   reloadPage(): void {
     window.location.reload();

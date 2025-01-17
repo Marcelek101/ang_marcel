@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import { CommonModule } from '@angular/common';
+import { UstawieniaComponent } from './ustawienia/ustawienia.component';
+ 
 
 
 @Component({
   selector: 'app-root',
-  imports: [ CommonModule, FormsModule, RouterOutlet, RouterLink, RouterLinkActive],
+  standalone: true,
+  imports: [ CommonModule, FormsModule, RouterOutlet, RouterLink, RouterLinkActive, UstawieniaComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
   
 })
 export class AppComponent {
+
+  eksportowanaZmienna = [ 'username' ];
 
   form: FormGroup;
   username: any;
@@ -60,6 +65,25 @@ export class AppComponent {
     {
       this.nap = true;
       this.zal = false;
+    }
+  }
+
+
+
+  zdjwie: boolean = false;
+  zdjmni: boolean = true
+
+  wiezdj(): void{
+    {
+      this.zdjmni = false;
+      this.zdjwie = true;
+    }
+  }
+
+  mnizdj(): void{
+    {
+      this.zdjmni = true;
+      this.zdjwie = false;
     }
   }
 
