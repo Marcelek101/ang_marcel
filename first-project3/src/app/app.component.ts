@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { UstawieniaComponent } from './ustawienia/ustawienia.component';
- 
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
 @Component({
@@ -11,10 +11,29 @@ import { UstawieniaComponent } from './ustawienia/ustawienia.component';
   standalone: true,
   imports: [ CommonModule, FormsModule, RouterOutlet, RouterLink, RouterLinkActive, UstawieniaComponent,],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
   
+  animations: [
+    trigger('moveElement', [
+      state('start', style({
+        transform: 'translateX(0)',
+      })),
+      state('end', style({
+        transform: 'translateX(100px)',
+      })),
+      transition('start <=> end', [
+        animate('0.5s ease-in-out'),
+      ]),
+    ]),
+  ],
 })
 export class AppComponent {
+
+  currentState = 'start';
+
+  toggleAnimation() {
+    this.currentState = this.currentState === 'start' ? 'end' : 'start';
+  }
 
   eksportowanaZmienna = [ 'username'];
 
@@ -87,5 +106,6 @@ export class AppComponent {
     }
   }
 
+  borderColor: string = '#000000'; // Domyślny kolor obramowania
   
 }

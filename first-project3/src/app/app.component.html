@@ -61,8 +61,19 @@
       
       <ul class="horizontal-list">
         <h1>{{username}}</h1> 
-        <img class="aniol" src="aniol.ico" style="width: 40px; height: 40px; border-radius: 35px; padding-top: 15px;padding-left: 15px;;padding-bottom: 15px;padding-right: 15px;"/>
+        <div class="image-container"  [style.border-color]="borderColor" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;height: 40px;margin-top: 10px;margin-left: 10px;margin-right: 10px;margin-bottom: 10px;" >
+          <img src="aniol.ico" style="border-radius: 30PX; width: 40px; height: 40px;">
+        </div>
       </ul>
+      <div class="color-controls" style="margin-top: 0px;" >
+        <label for="colorPicker"></label>
+        <input
+          id="colorPicker"
+          type="color"
+          [(ngModel)]="borderColor"
+          aria-label="Wybierz kolor"
+        />
+      </div>
       <ul>
         <hr>
         <li><a routerLink="/">Home</a></li>
@@ -84,3 +95,4 @@
     <router-outlet/>
   </div>
 </div>
+

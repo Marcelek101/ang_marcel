@@ -175,10 +175,28 @@ html, body, .custom-form {
   list-style-type: none; /* Usunięcie kropek */
   padding: 2; /* Usuń domyślne odstępy */
   margin: 2; /* Usuń domyślne marginesy */
+  
 }
 
 .horizontal-list li {
   margin-right: 15px; /* Odstęp między elementami */
 }
 
+.image-container{
+  display: inline-block;
+  border: 5px solid #000; /* Domyślny kolor obramowania */
+  border-radius: 30px; /* Zaokrąglone rogi */
+  padding: 5px; /* Margines między obrazkiem a obramowaniem */
+  transition: border-color 0.3s ease; /* Animacja zmiany koloru */
+  
+}
 
+
+.color-controls {
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-size: 16px;
+}
