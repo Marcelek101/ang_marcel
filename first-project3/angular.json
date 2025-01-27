@@ -11,11 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/first-project",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -29,12 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -94,7 +89,7 @@
                 "input": "src/assets",
                 "output": "/assets/"
               }
-              
+
             ],
             "styles": [
               "src/styles.css"
@@ -104,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d9e27017-850b-4949-b93a-7b1c3435c1ae"
   }
 }
