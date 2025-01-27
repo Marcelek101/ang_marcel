@@ -1,0 +1,26 @@
+<div class="container">
+    
+    <div class="total-display">
+      <h1>Aktualna suma: {{ total | currency:'PLN ' }}</h1>
+    </div>
+  
+    
+    <div *ngIf="isMillionaire" class="alert">
+      <p>Wow! Wprowadziłeś milion lub więcej! 🤑</p>
+    </div>
+  
+    
+    <form (ngSubmit)="addAmount()" #amountForm="ngForm" class="form">
+      <label for="amount">Wpisz kwotę:</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        [(ngModel)]="newAmount"
+        required
+        placeholder="Wprowadź kwotę"
+      />
+      <button type="submit" [disabled]="amountForm.invalid">Wesprzyj</button>
+    </form>
+  </div>
+  

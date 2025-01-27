@@ -1,0 +1,98 @@
+<div *ngIf="zal">
+  <form #form="ngForm" class="custom-form">
+
+    <label  for="username">Nazwa użytkownika:</label>
+    
+    <input 
+      id="username"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Marcelek"
+      minlength="5"
+      maxlength="12" 
+      required
+      #usernameInput="ngModel"
+    />
+    <div *ngIf="usernameInput.errors?.['required'] && usernameInput.touched">
+      Pole jest wymagane.
+    </div>
+    <div *ngIf="usernameInput.errors?.['minlength'] && usernameInput.touched">
+      Minimalna liczba znaków to 5.
+    </div>
+    <div *ngIf="usernameInput.errors?.['maxlength'] && usernameInput.touched">
+      Maksymalna liczba znaków to 12.
+    </div>
+    
+      <br>
+      <br>
+
+    <label for="password">Hasło:</label>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      minlength="5"
+      maxlength="20"
+      required
+      #passwordInput="ngModel"
+    />
+    <div *ngIf="passwordInput.errors?.['required'] && passwordInput.touched">
+      Pole jest wymagane.
+    </div>
+    <div *ngIf="passwordInput.errors?.['minlength'] && passwordInput.touched">
+      Minimalna liczba znaków to 5.
+    </div>
+    <div *ngIf="passwordInput.errors?.['maxlength'] && passwordInput.touched">
+      Maksymalna liczba znaków to 20.
+    </div>
+    <br>
+    <br>
+    <button [disabled]="form.invalid" (click)="log()" type="submit">Zaloguj się</button>
+
+  </form>
+</div>
+
+
+
+
+<div *ngIf="nap" class="root">
+    <nav class="sidebar">
+      
+      <ul class="horizontal-list">
+        <h1>{{username}}</h1> 
+        <div class="image-container"  [style.border-color]="borderColor" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;height: 40px;margin-top: 10px;margin-left: 10px;margin-right: 10px;margin-bottom: 10px;" >
+          <img src="aniol.ico" style="border-radius: 30PX; width: 40px; height: 40px;">
+        </div>
+      </ul>
+      <div class="color-controls" style="margin-top: 0px;" >
+        <label for="colorPicker"></label>
+        <input
+          id="colorPicker"
+          type="color"
+          [(ngModel)]="borderColor"
+          aria-label="Wybierz kolor"
+        />
+      </div>
+      <ul>
+        <hr>
+        <li><a routerLink="/">Home</a></li>
+        <li *ngIf="ot" ><a routerLink="/about">O mnie</a></li>
+        <li *ngIf="ot" ><a routerLink="/contact">Kontakt</a></li>
+        <Li *ngIf="ot" ><a routerLink="/zdjecia">Zdjęcia</a></Li>
+
+        <Li *ngIf="zdjwie && ot" ><a routerLink="/zdjecia2">Zdjęcia2</a></Li>
+        <button *ngIf="ot && zdjmni" class="zdjecia" (click)="wiezdj()" style="background-color: #cccccc; color: black; font-size: 12px; padding: 5px 10px; border: 1px solid #999999; border-radius: 20px; cursor: pointer;">więcej</button>
+        <button *ngIf="ot && zdjwie" class="zdjecia" (click)="mnizdj()" style="background-color: #cccccc; color: black; font-size: 12px; padding: 5px 10px; border: 1px solid #999999; border-radius: 20px; cursor: pointer;">mniej</button>
+
+        <Li *ngIf="ot" ><a routerLink="/ustawienia">Ustawienia</a></Li>
+        <Li *ngIf="ot" ><a routerLink="/wesprzyj">wesprzyj</a></Li>
+        <button *ngIf="mniej_czy_wiecej" class="wiecej" (click)="wie()">więcej</button>
+        <button *ngIf="wiecej_czy_mniej" class="mniej" (click)="mni()">mniej</button>
+      </ul>
+    </nav>
+  <div class="content">
+    <router-outlet/>
+  </div>
+</div>
+

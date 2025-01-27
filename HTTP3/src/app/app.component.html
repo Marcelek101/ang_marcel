@@ -1,0 +1,26 @@
+<div class="artworks">
+    <h1>Artworks about Cats</h1>
+  
+    <div *ngIf="artworksData; else loading">
+      <ul>
+        <li *ngFor="let artwork of artworksData.data">
+          <h2>{{ artwork.title }}</h2>
+          <p>Score: {{ artwork._score }}</p>
+          <img 
+            [src]="artwork.thumbnail?.lqip" 
+            [alt]="artwork.thumbnail?.alt_text" 
+            [width]="200" 
+          />
+          <p>
+            <a [href]="artwork.api_link" target="_blank">More details</a>
+          </p>
+          <hr />
+        </li>
+      </ul>
+    </div>
+  
+    <ng-template #loading>
+      <p>Loading artworks...</p>
+    </ng-template>
+  </div>
+  

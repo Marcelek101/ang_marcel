@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/": {},
+    "/about": {},
+    "/contact": {},
+    "/ustawienia": {},
+    "/wesprzyj": {},
+    "/zdjecia": {},
+    "/zdjecia2": {}
+  }
+}

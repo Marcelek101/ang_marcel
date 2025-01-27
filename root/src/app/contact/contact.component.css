@@ -1,0 +1,34 @@
+html, body, .root {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar {
+    width: 400px;
+    
+  }
+  
+  .sidebar ul {
+    padding: 0;
+  }
+  
+
+  .sidebar.inf {
+    width: 350px;
+    background-color:rgb(30, 32, 54);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .sidebar.inf ul {
+    padding: 0;
+  }
+
+  a{
+    font-size: 25px;
+    font-style: italic;
+  }

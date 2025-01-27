@@ -3,10 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import domtoimage from 'dom-to-image'; // Ensure this is installed
 import { saveAs } from 'file-saver'; // Ensure this is installed
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   

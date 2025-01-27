@@ -1,0 +1,202 @@
+html, body, .root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 200px;
+  background-color:rgb(30, 32, 54);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+  background: #eee;
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #00bcd4;
+}
+
+#showButton {
+  margin-right: 1rem;
+}
+
+
+button.wiecej {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  
+  border: 0;
+  
+}
+
+button.wiecej:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
+
+button.mniej {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  
+  border: 0;
+  
+}
+
+button.mniej:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
+.custom-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.custom-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.custom-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.custom-form div {
+  font-size: 12px;
+  color: red;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+.custom-form input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.custom-form input.ng-valid.ng-touched {
+  border-color: green;
+}
+
+.custom-form input.ng-invalid.ng-touched {
+  background-color: #ffe6e6;
+}
+
+.custom-form input.ng-valid.ng-touched {
+  background-color: #e6ffe6;
+}
+
+html, body, .custom-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.horizontal-list {
+  display: flex; /* Ustawienie Flexboxa */
+  list-style-type: none; /* Usunięcie kropek */
+  padding: 2; /* Usuń domyślne odstępy */
+  margin: 2; /* Usuń domyślne marginesy */
+  
+}
+
+.horizontal-list li {
+  margin-right: 15px; /* Odstęp między elementami */
+}
+
+.image-container{
+  display: inline-block;
+  border: 5px solid #000; /* Domyślny kolor obramowania */
+  border-radius: 30px; /* Zaokrąglone rogi */
+  padding: 5px; /* Margines między obrazkiem a obramowaniem */
+  transition: border-color 0.3s ease; /* Animacja zmiany koloru */
+  
+}
+
+
+.color-controls {
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-size: 16px;
+}

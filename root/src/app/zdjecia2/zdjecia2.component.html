@@ -1,0 +1,28 @@
+
+  <div class="root">
+    <nav class="sidebar">
+      <ul>
+        <div class="slider-container">
+            <input 
+                type="range" 
+                min="0" 
+                [max]="images.length - 1" 
+                [(ngModel)]="currentIndex" 
+                (input)="onSlideChange()"
+            />
+            </div>
+              
+            <div class="image-container">
+            <img 
+                [src]="images[currentIndex]" 
+                alt="Zdjęcie Kalenji" 
+                class="slider-image"
+            />
+            </div>
+      </ul>
+    </nav>  
+</div>
+
+
+
+

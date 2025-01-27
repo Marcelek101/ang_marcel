@@ -1,0 +1,34 @@
+<div class="container">
+
+    <ul>
+
+     <h1>Moja aplikacja</h1>
+      <hr>
+     <div class="a"></div>
+
+     <br>
+     <br>
+
+      <div class="coś">
+      <label for="inputField"> wpisz coś:</label>
+      <input type="text id="inputField [(ngModel)]="inputText" placeholder="wpisz text...">
+      <p>wpisany tekst: {{ inputText }}</p>
+      </div>
+
+      <br>
+      <br>
+
+        <button class="button-85" style="margin-right: 20px;" role="button" (click)="plus()">+</button>
+        <button class="button-85" role="button" (click)="minus()">-</button>
+
+      <p>Numer: {{ currentNumber }}</p>
+      
+        <button class="kwa" style="margin-right: 20px;" id="showButton" (click)="po()">Pokaż kwadrat</button>
+        <button class="kwa" id="hideButton" (click)="sc()">Schowaj kwadrat</button>
+
+      
+        
+        <div *ngIf="jest" class="square" ></div>
+    </ul>
+
+</div>
