@@ -10,21 +10,32 @@ import { Component, inject, OnInit } from '@angular/core';
 })
 export class DataDisplayComponent implements OnInit {
 
+  public pageNumber = 1
   public data: any;
 artworksData: any;
   constructor(private http: HttpClient){
   }
 
   ngOnInit(): void {
-    this.fetchDetails();
+    this.loadPage(this.pageNumber);
   }
 
-  public fetchDetails(){
-    this.http.get('	https://api.artic.edu/api/v1/artworks/search?q=cats').subscribe(
+  loadPage(pageNumber: number): void{
+    const url = `https://api.artic.edu/api/v1/artworks/search?q=cats&page=${pageNumber}`
+    this.http.get(url).subscribe(
       (resp:any) => {
-        console.log(resp);
         this.data = resp;
       }
     )
+  }
+
+  loadNextPage() {
+    this.pageNumber++;
+    this.loadPage(this.pageNumber);
+  }
+
+  loadPreviousPage() {
+    this.pageNumber--;
+    this.loadPage(this.pageNumber);
   }
 }

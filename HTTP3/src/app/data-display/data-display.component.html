@@ -1,1 +1,13 @@
-<div>{{data.alt_text}}</div>
+<div class="root">
+  <div *ngFor="let animal of this.data.data">
+    <div class="animal">
+      <h4>{{animal.title}}</h4>
+      <label>{{animal.artist_display}}</label>
+    </div>
+  </div>
+  <label class="page-counter">Page number: {{this.pageNumber}}</label>
+  <div>
+    <button class="page-button" (click)="loadPreviousPage()" [disabled]="pageNumber <= 1">previous page</button>
+    <button class="page-button" (click)="loadNextPage()">next page</button>
+  </div>
+</div>
